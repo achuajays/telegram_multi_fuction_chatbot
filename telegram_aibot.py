@@ -10,11 +10,11 @@ from groq import Groq
 # Load environment variables
 load_dotenv()
 
-
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 
 # Initialize the Groq client
-client = Groq()
+client = Groq(api_key=GROQ_API_KEY)
 
 
 # Function to download and encode image from Telegram
